@@ -8,25 +8,32 @@
 </head>
 
 <body>
-    <header class=header> <!-- changed to semantic element -->
+    <header class=header> 
         <h1>Geneva's Portfolio</h1>
         <nav>
-            <a href="#about-me">About Me</a>
-            <a href="#my-work">Work</a>
-            <a href="#contact-me">Contact Me</a>
+            <ul>
+                <li>
+                    <a href="#about-me">About Me</a>
+                </li>
+                <li>
+                    <a href="#my-work">Work</a>
+                </li>
+                <li>
+                    <a href="#contact-me">Contact Me</a>
+                </li>
+            </ul>
         </nav>    
     </header>
-    <main> <!-- changed to semantic element -->
+    <main> 
         <div class="about-me">
-            <img src="./Images/Photo.JPG" class="float-left" alt="Self Photo"/> 
-            <!-- changed src -->
+            <img src="./Images/photo.jpg" class="float-left" alt="Self Photo"/> 
             <h2>About Me</h2> 
             <p>I am an Information Systems Security Officer looking to specialize in DevSecOps. This is my first time learning any coding and I believe it is essential for any cyber security specialist to have a basic understanding of programming. Better late than never! I'm originally from California, and while I love Texas, I certainly wouldn't mind waking up to the sight of the ocean of every morning and plan on going back once my two lovely daughters have gone off to college. </p>
         </div>
         <div class="my-work" >
             <img src="./Images/Work.jpg" class="float-right" alt="Factory Workers"/>
             <h2>Work</h2>
-                <a href="https://gjdiaz.github.io/02-Homework-Yikes/">Click here to see my work</a>
+                <p>Click here to see my work</p>
             <!-- insert grid or boxes of the following: online store, horoscope, password generator -->
         </div>
         <div class="contact-me" >
@@ -37,7 +44,6 @@
     </main>
     <aside class="upcoming-projects">
         <h2>Upcoming Projects</h2>
-        <!-- links go to under construction image -->
         <div class="childrens-games">
             <!-- changed absolute path for img sources, added alt -->
             <h3>Children's Games</h3> 
