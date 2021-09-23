@@ -4,10 +4,6 @@
     margin: 0;
 }
 
-body {
-    background-color: #d9dcd6;
-}
-
 .header {
     position: relative;
     width: 100%;
@@ -15,7 +11,7 @@ body {
     font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
     background-color: #9789d4;
     color: black;
-    /* this keeps the text within the header background as the screen size chnanges */
+    /* this keeps the text within the header background as the screen size changes */
     display:flex;
 }
 
@@ -49,10 +45,6 @@ body {
     flex-wrap: wrap;
 }
 
-p {
-    font-size: 16px;
-}
-
 /* use this for brackground photo */
 #background {
     height: 800px;
@@ -73,17 +65,11 @@ p {
     margin-left: 25px;
 }
 
-.main {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
 .tooltip:hover {
     visibility: collapse;
 }
 
-.upcoming-projects {
+#upcoming-projects {
     margin-right: 20px;
     padding: 20px;
     float: left;
@@ -93,9 +79,9 @@ p {
     background-color: #585f63;
     text-align: center;
     font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
+    
 }
 
-/* grouped the following classes with the same properties together */
 .childrens-games, .store, .security-consulting {
     margin-bottom: 32px;
     color: #ffffff;
@@ -106,10 +92,27 @@ p {
     margin-top: 20px;
     margin-bottom: 5px;
     text-align: center;
-    display: inline-flexbox;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#fun-stuff  {
+    margin-right: 20px;
+    padding: 20px;
+    float: left;
+    width: 20%;
+    height: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #585f63;
+    text-align: center; 
+    font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
+
+}
+
+.horoscope, .video  {
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .about-me, .my-work, .contact-me {
     margin: 20px;
@@ -118,6 +121,45 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #6fdfd9;
     color: #585f63; 
+}
+
+.jqModal {
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
+}
+
+.content {
+    background-color:#FFF;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #809;
+    width: 80%;
+}
+
+#modalBtn {
+    background-color: #585f63;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.horoscope h3, .video h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .about-me img, .my-work img, .contact-me img {
@@ -129,6 +171,19 @@ p {
     color: black;
     font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
 }
+
+.fa {  
+    padding: 20px;  
+    text-align: center;  
+    margin: 5px 2px;  
+    font-size: 30px;  
+    width: 50px;  
+  }  
+
+  .fa-linkedin {  
+    background: #007bb5;  
+    color: white;  
+  }  
 
 footer {
     padding: 30px;
@@ -151,23 +206,22 @@ footer h2 {
         }
 }
 
-@media screen and (min-width: 768px)  {
-        width: 25%;
-        }
-        .about-me, .my-work, .contact-me {
-            border: solid #1f1d1d; 
-         }
+@media screen and (min-width: 768px)  {   
+    body  {
+        background-color: black;
+    }
+    .about-me, .my-work, .contact-me {
+        border: solid whitesmoke
+    }
 }
+
 @media screen and (max-width: 768px)  {
-        width: 25%;
+
         body  {
             background-color: whitesmoke;
         }
         main, .about-me, .my-work, .contact-me {
             border: solid #1f1d1d; 
             flex-direction: column;
-        }
-        aside h2 {
-            display:inline-block;
         }
 }

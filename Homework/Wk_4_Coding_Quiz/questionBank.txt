@@ -1,0 +1,204 @@
+html ---------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Quiz</title>
+</head>
+<body>  
+    <h1 class="time" style="text-align:center;"></h1>
+    <div id="main">
+        <!-- <button id="start">Start</button> -->
+    </div>
+    <div class="container">
+        <div class="questions" id="display-question"></div>
+            <form name="current-question">
+           
+            </form>
+                <button id="true">True</button>
+                <button id="false">False</button>
+                <button id="submit">Submit</button>
+                <button id="results"></button>
+        </div>
+    </div> 
+    <script src="./questionBank.js"></script>
+</body>
+</html>
+
+js ---------------------
+var submitBtn = document.getElementById("submit");
+submitBtn.addEventListener("click", getOutput);
+
+var questions = ['Question1', 'Question2', 'Question3'];
+function getOutput() {
+    function randomize(questions) {
+    var currentIndex = questions.length;
+    var tempQuestion, randomIndex;
+
+    while (currentIndex > 1 ) {
+     randomIndex = math.floor(math.random() * currentIndex);
+     currentIndex -= 1;
+     tempQuestion = question[currentIndex];
+      questions[currentIndex] = questions[randomIndex];
+      questions[randomIndex] = tempQuestion;
+
+    }
+    return questions;
+
+
+
+
+    }
+    //document.write(questions[0]);
+};
+
+
+// prompt for next question on true/false answer
+var quizContainer = document.querySelector(".container");
+var trueButton = document.getElementById("true");
+var falseButton = document.getElementById("false");
+var index = 0;
+
+var answerTrue = trueButton.addEventListener("click", getQuestions);
+var answerFalse = falseButton.addEventListener("click", getQuestion);
+
+function getQuestions(direction) {
+  index = index + direction;
+  if (index < 0) { 
+    index = questionBank.length - 1; 
+  } else if (index > questionBank.length - 1) { 
+    index = 0;
+  }
+  getQuestion = questionBank[index];
+}
+}
+
+// provide true/false question from a question bank - array
+var questions = [{
+
+  Question1: "Java is short for JavaScript",
+  correctAnswer: False
+},
+{
+  Question2: "Logical operators take in two or more expressions and return true or false",
+  correctAnswer: True
+},
+{
+  Question3: "The index of the first element in an array is '1'",
+  correctAnswer: False
+},
+ { 
+  Question4: "A variable declared in global scope is available to all functions",
+   correctAnswer: True
+ },
+ {
+   Question5: "The 'push' method adds elements to the end of an array",
+   correctAnswer: True
+ }, 
+ {
+   Question6: "The 'this' keyword refers to the object from which the function was called",
+   correctAnswer: True
+ },
+ {
+   Question7: "Undefined, string, number, and boolean data types are refered to as 'native' data stypes",
+   correctAnswer: False
+ }  ];
+
+/*
+ * Question variables
+ */
+var currentQuestions = 0;
+var currentAnswer = 0;
+var quizDone = false;
+
+
+$(document).ready(function(){
+
+/* 
+ * Show current question
+ */
+
+// trueButton.addEventListener("click", function() {
+  displayQuestions();
+
+  function randomize(questions) {
+    var currentIndex = questions.length; 
+    var tempQuestion, randomIndex;
+
+    //pick remaining element
+    while (currentIndex > 1 ) {
+      randomIndex = math.floor(math.random() * currentIndex);
+     currentIndex -= 1;
+     tempQuestion = question[currentIndex];
+      questions[currentIndex] = questions[randomIndex];
+      questions[randomIndex] = tempQuestion;
+
+    }
+    return questions;
+  }
+
+
+});
+
+
+// use event bubbling to navigate carousel of questions
+function nextQuestion
+
+
+
+// add true and false buttons in html - already added
+<button id="true">True</button>
+<button id="false">False</button>
+
+-------
+function navigate(direction) {
+  index = index + direction;
+  if (index < 0) { 
+    index = questionBank.length - 1; 
+  } else if (index > questionBank.length - 1) { 
+    index = 0;
+  }
+  currentQuestion = questionBank[index];
+}
+
+carousel.addEventListener("click", function() {
+    window.location.href = questionBank[index];
+});
+
+trueButton.addEventListener("click", function(event) {
+    event.stopPropagation();
+    navigate(1);
+});
+
+falseButton.addEventListener("click", function(event) {
+    event.stopPropagation();
+    navigate(1);
+});
+
+------ counter ---------
+var count = 0;
+var incrementEl = document.querySelector("#true");
+var decrementEl = document.querySelector("#false");
+var countEl = document.querySelector("#results");
+
+
+
+function setCounterText() {
+  countEl.textContent = count;
+}
+
+// TODO: Add event listener to increment button
+incrementEl.addEventListener("click",function() {
+  count++; //++ increments it by 1
+  setCounterText();
+})
+// TODO: Add event listener to decrement button 
+decrementEl.addEventListener("click",function() {
+  if (count > 0)  {
+    count--;
+  } //++ increments it by 1
+  setCounterText();
+})

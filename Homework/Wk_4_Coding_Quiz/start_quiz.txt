@@ -1,0 +1,30 @@
+
+
+// write function for start button to start looping questions, start timer, decrement timer if wrong - eventListener
+var startBtn = document.getElementById("start");
+
+startBtn.addEventListener("click", startTimer);
+
+startBtn.addEventListener("click", startQuiz);
+
+ 
+function startTimer() {
+    console.log("timer has started");
+}
+
+function startQuiz()  {
+    alert("quiz has started");
+}
+function startTimer(startBtn) { 
+   startBtn.addEventListener("click", startBtn, console.log("timer has started"));
+
+}
+
+function startQuiz(startBtn) {
+   startBtn.addEventListener("click", startBtn, alert("quiz has started"));
+}
+
+// add hide start button onclick startBtn
+
+// ------ add questionBank code here ----------
+
