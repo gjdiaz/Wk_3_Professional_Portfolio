@@ -1,33 +1,195 @@
-body  {
-
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-header  {
-
+.header {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
+    background-color: #9789d4;
+    color: black;
+    /* this keeps the text within the header background as the screen size changes */
+    display:flex;
 }
 
-h1  {
-
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
 }
 
-nav  {
-
+.header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
-main  {
-
+.header nav {
+    display: inline;
+    margin-left: 25px;
+    color:whitesmoke;
 }
 
-section  {
-    height: 2em;
-    width: 4em;
+.header nav ul li {
+    display: inline;
+    margin-left: 25px;
 }
 
-.games  {
-
+.nav a {
+    color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.subscribe  {
+/* use this for brackground photo */
+#background {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(./images/Beach.JPG); /* corrected absolute path for url, removed quotes */
+    background-size: cover;
+    background-position: center;
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+.tooltip:hover {
+    visibility: collapse;
+}
+
+#upcoming-projects {
+    margin-right: 20px;
+    padding: 20px;
+    float: left;
+    width: 20%;
+    height: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #585f63;
+    text-align: center;
+    font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
     
 }
 
+.childrens-games, .store, .security-consulting {
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.childrens-games h3, .store h3, .security-consulting h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#fun-stuff  {
+    margin-right: 20px;
+    padding: 20px;
+    float: left;
+    width: 20%;
+    height: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #585f63;
+    text-align: center; 
+    font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
+
+}
+
+.horoscope, .video  {
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-me, .my-work, .contact-me {
+    margin: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #6fdfd9;
+    color: #585f63; 
+}
+
+.horoscope h3, .video h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-me img, .my-work img, .contact-me img {
+    max-height: 200px;
+}
+
+.about-me h2, .my-work h2, .contact-me h2 {
+    font-size: 36px;
+    color: black;
+    font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
+}
+
+.fa {  
+    padding: 20px;  
+    text-align: center;  
+    margin: 5px 2px;  
+    font-size: 30px;  
+    width: 50px;  
+  }  
+
+  .fa-linkedin {  
+    background: #007bb5;  
+    color: white;  
+  }  
+
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Segoe Script', 'Segoe Print', 'Segoe UI';
+    text-align: center;
+    color: #9789d4;
+}
+
+footer h2 {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 992px)  {   
+        body  {
+            background-color: black;
+        }
+        .about-me, .my-work, .contact-me {
+            border: solid whitesmoke
+        }
+}
+
+@media screen and (min-width: 768px)  {   
+    body  {
+        background-color: black;
+    }
+    .about-me, .my-work, .contact-me {
+        border: solid whitesmoke
+    }
+}
+
+@media screen and (max-width: 768px)  {
+
+        body  {
+            background-color: whitesmoke;
+        }
+        main, .about-me, .my-work, .contact-me {
+            border: solid #1f1d1d; 
+            flex-direction: column;
+        }
+}
