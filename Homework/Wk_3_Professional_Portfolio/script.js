@@ -1,5 +1,5 @@
 
-var horoscope = document.querySelector('.horoscope');
+dvar horoscope = document.querySelector('.horoscope');
 
 function getApi() {
     fetch("git ", {
@@ -24,8 +24,5 @@ var myButton = document.getElementById("modalBtn");
 myButton.onclick = function() {
 myModal.style.display = "block";
 }
-window.onclick = function(event) {
-    if (event.target == myModal) {
-    myModal.style.display = "none";
-    }
-}
+
+$('#login-form').modal();

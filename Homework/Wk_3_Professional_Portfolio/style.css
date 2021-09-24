@@ -123,38 +123,6 @@
     color: #585f63; 
 }
 
-.jqModal {
-    display: none;
-    position: fixed;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.7);
-}
-
-.content {
-    background-color:#FFF;
-    margin: auto;
-    padding: 20px;
-    border: 3px solid #809;
-    width: 80%;
-}
-
-#modalBtn {
-    background-color: #585f63;
-    color: white;
-    padding: 12px 20px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 .horoscope h3, .video h3 {
     margin-top: 20px;
     margin-bottom: 5px;
